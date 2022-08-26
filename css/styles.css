@@ -175,8 +175,10 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
 
-  
+.header-contacts-icon {
+  margin-right: 10px;
 }
 
 .header-contacts a {
@@ -188,7 +190,10 @@ body {
   color: var(--accent-color);
 }
 
-
+.header-contacts a:hover .header-contacts-icon,
+.header-contacts a:focus .header-contacts-icon {
+  fill: var(--accent-color);
+}
 
 /* ====== MAIN ======*/
 
@@ -260,6 +265,31 @@ body {
   padding-top: 94px;
 }
 
+.advances-icon {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.advances-icon-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  min-width: 270px;
+
+  background-position: center;
+  background-color: var(--second-background-color);
+}
+
+.icon-advances {
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .advances-list {
   display: flex;
 }
@@ -267,18 +297,6 @@ body {
 .advances-item {
   flex-basis: calc((100%-90px) / 4);
 }
-
-/* .advances-item::before {
-  content: "";
-  display: block;
-  height: 120px;
-  background-image: url(../images/пунктуальність.svg);
-  background-size: 70px 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f5f4fa;
-  margin-bottom: 30px;
-} */
 
 .advances-item:not(:nth-child(4n)) {
   margin-right: 30px;
@@ -303,7 +321,8 @@ body {
 
 /* ========= Work ========*/
 .work-title,
-.team-title {
+.team-title,
+.clients-titel {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -366,11 +385,79 @@ body {
 
 .team-subject-text {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
+}
 
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon {
+  fill: #fff;
+}
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  padding-bottom: 30px;
+}
+
+.team-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+
+/* =========Clients========== */
+
+.clients-titel {
+  padding-top: 94px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  padding-bottom: 94px;
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4%;
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
 }
 
 /* ========Footer======= */
@@ -430,6 +517,55 @@ body {
 .footer-tel {
   color: var(--footer-contacts-color);
 }
+/* ==========Footer-social======== */
+
+.footer-social h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--second-text-color);
+
+  margin-bottom: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+  column-gap: 10px;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-info {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-info-part {
+  margin-right: 70px;
+}
 
 /* =======Portfolio===== */
 
@@ -462,6 +598,8 @@ body {
 .portfolio-button:focus {
   background-color: var(--accent-color);
   color: var(--second-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* =========Category======= */
@@ -502,4 +640,15 @@ body {
 
 .category-item {
   background-color: var(--fourth-backgraund-color);
+}
+
+.categore-link {
+  display: block;
+}
+
+.categore-link:hover,
+.categore-link:focus {
+
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
